@@ -1,6 +1,18 @@
 const express = require('express');
+const pgp = require('pg-promise')();
 
 const server = express();
+
+const cn = {
+  host: 'localhost',
+  port: 5432,
+  database: 'demo-bcrypt',
+  user: 'admin',
+  password: '',
+  allowExitOnIdle: true
+};
+
+const db = pgp(cn);
 
 server.get('/heartbeat', (req, res) => {
   res.json({
