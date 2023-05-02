@@ -6,7 +6,7 @@ const server = express();
 const cn = {
   host: 'localhost',
   port: 5432,
-  database: 'demo-bcrypt',
+  database: 'demo_bcrypt',
   user: 'admin',
   password: '',
   allowExitOnIdle: true
